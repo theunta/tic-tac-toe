@@ -8,9 +8,9 @@ Includes a game reset button and light mode toggle button
 
 Has a random (1 of 3) fact splash text on the first load of the website
 
-## 🕹 [Click here](https://theunta.github.io/tic-tac-toe/) to try out the website
-## ✏️ Planning & Requirements
-### **Requirements**
+## 🕹 [Click here](https://theunta.github.io/tic-tac-toe/) to try out the website 🕹
+## ✏️ Planning & Requirements ✏️
+### **Requirements** 
 
 *Adhere to the basic rules of tic-tac-toe, Three in a row results in a win
 
@@ -83,7 +83,7 @@ Confetti animation when winner is announced
 
 "clack" sound when you place a tile
 
-## **Issues**
+## 🛠 **Issues** 🛠
 
 Font can sometimes load slowly resulting in some elements being the wrong value
 

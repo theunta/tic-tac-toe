@@ -1,5 +1,11 @@
 # Tic Tac Toe
 
+Simple game of Tic-tac-toe or noughts and crosses!
+
+Tracks whos turn it is and winner
+
+Includes a game reset button and light mode toggle button
+
 ## :computer: [Click here](https://theunta.github.io/tic-tac-toe/) to see my live project!
 ## ✏️ Planning & Problem Solving
 ### **Requirements**

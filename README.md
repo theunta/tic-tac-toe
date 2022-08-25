@@ -83,7 +83,7 @@ Confetti animation when winner is announced
 
 "clack" sound when you place a tile
 
-### **Issues**
+## **Issues**
 
 Font can sometimes load slowly resulting in some elements being the wrong value
 

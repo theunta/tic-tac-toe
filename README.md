@@ -6,6 +6,8 @@ Tracks whos turn it is and winner
 
 Includes a game reset button and light mode toggle button
 
+Has a random (1 of 3) fact splash text on the first load of the website
+
 ## :computer: [Click here](https://theunta.github.io/tic-tac-toe/) to see my live project!
 ## ✏️ Planning & Problem Solving
 ### **Requirements**

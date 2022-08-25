@@ -10,9 +10,10 @@ let isGameActive = true;
 //*Select each element
 //converting the querySelectorAll nodes into an array of dom objects
 const tiles = Array.from(document.querySelectorAll('.tile'));
-const playerDisplay = document.querySelector('.playerTurn');
+const playerDisplay = document.querySelector('.currentTurn');
 const resetButton = document.querySelector('#reset');
 const announcer = document.querySelector('.gameResult');
+const lightButton = document.querySelector('#lightbulb');
 
 //announces endgame state
 const TIE = 'TIE';
@@ -39,10 +40,10 @@ const winningConditions = [
 const announce = (type) => {
     switch(type){
         case PLAYER1_WON:
-            announcer.innerHTML = 'Player <span class="player1">1</span> Won';
+            announcer.innerHTML = 'Player 1 Won';
             break;
         case PLAYER2_WON:
-            announcer.innerHTML = 'Player <span class="player2">2</span> Won';
+            announcer.innerHTML = 'Player 2 Won';
             break;
         case TIE:
             announcer.innerText = 'Tie';
@@ -84,6 +85,32 @@ if (!board.includes(''))
 
 //////////////////////////////////////////////////////////////////////
 
+//generates a fact from a list for initial dialogue under game name
+function randomFact(){
+    const facts = ["Games played on three-in-a-row boards can be traced back to ancient Egypt, where such game boards have been found on roofing tiles dating from around 1300 BC.","In 1952, OXO (or Noughts and Crosses), developed by British computer scientist Sandy Douglas for the EDSAC computer at the University of Cambridge, became one of the first known video games. The computer player could play perfect games of tic-tac-toe against a human opponent.","'Tic-tac-toe' may derive from 'tick-tack', the name of an old version of backgammon first described in 1558. The US renaming of 'noughts and crosses' to 'tic-tac-toe' occurred in the 20th century"]
+    if (announcer.innerText = ' '){
+        let newfact = Math.floor(Math.random() * 3);
+        announcer.innerText = facts[newfact]
+    }
+}
+
+function winnerCelebration(){
+    if(announcer.innerText === 'Player 2 Won'){
+        announcer.style.color = "red";
+        announcer.style.fontSize = "32px";
+    }
+    if(announcer.innerText === 'Player 1 Won'){
+        announcer.style.color = "green";
+        announcer.style.fontSize = "32px";
+    }
+    if(announcer.innerText === 'Tie'){
+        announcer.style.fontSize = "32px";
+        announcer.style.color = "yellow";
+    }
+}
+
+//////////////////////////////////////////////////////////////////////
+
 //if the tile has a value already returns false, this allows the game to ignore false actions. (returns true if you click on an empty index tile)
 const isValidAction = (tile) => {
     if (tile.innerText === '1' || tile.innerText === '2'){
@@ -117,6 +144,7 @@ const userAction = (tile, index) => {
         updateBoard(index);
         gameLogic();
         changePlayer();
+        winnerCelebration()
     }
 }
 
@@ -143,8 +171,48 @@ const resetBoard = () => {
 tiles.forEach( (tile, index) => {
     tile.addEventListener('click', () => userAction(tile, index));
 });
-
+winnerCelebration()
+randomFact()
 //*Reset game button
 resetButton.addEventListener('click', resetBoard);
+
+
+//globally scoped variable to let the function be a toggle
+let lightToggle = 0;
+
+//adds lightmode button that changes the theme of the website! really annoying and hurts the eyes!
+function lightMode (){
+    lightToggle = lightToggle + 1
+    if (lightToggle === 1){
+        let backgroundStyle = document.querySelector('body');
+        backgroundStyle.style.backgroundColor = 'white'
+        let headingStyle = document.querySelector('.heading');
+        headingStyle.style.color = 'black'
+        let turnStyle = document.querySelector('.playerTurn');
+        turnStyle.style.color = 'black'
+        let resultStyle = document.querySelector('.gameResult');
+        resultStyle.style.color = 'black'
+        document.querySelectorAll('.tile').forEach(el => {
+            el.style.color = 'black'
+        })
+    }
+    if (lightToggle === 2){
+        let backgroundStyle = document.querySelector('body');
+        backgroundStyle.style.backgroundColor = '#282b30'
+        let headingStyle = document.querySelector('.heading');
+        headingStyle.style.color = 'white'
+        let turnStyle = document.querySelector('.playerTurn');
+        turnStyle.style.color = 'white'
+        let resultStyle = document.querySelector('.gameResult');
+        resultStyle.style.color = 'white'
+        document.querySelectorAll('.tile').forEach(el => {
+            el.style.color = 'white'
+        })
+    }
+    if (lightToggle === 3){
+        lightToggle = 0
+    }
+}
+lightButton.addEventListener('click', lightMode);
 
 });

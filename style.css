@@ -1,12 +1,10 @@
-body {
-    padding: 0;
-    margin: 0;
+@font-face{
+    font-family: "replaceFont";
+    src: url(./XandO.ttf);
 }
 
-.background {
-    height: 100vh;
+body {
     background-color: #282b30;
-    padding: 1px;
 }
 
 .heading {
@@ -20,7 +18,7 @@ body {
     color: white;
     font-size: 32px;
     text-align: center;
-    font-family: sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .board {
@@ -40,34 +38,40 @@ body {
     align-items: center;
     font-size: 50px;
     cursor: pointer;
+    font-family: "replaceFont";
+    color: white;
 }
 
-
-.displayReset {
+button {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 10px 0px 0px 10px ;
-}
-
-.displayReset button {
     color: white;
     cursor: pointer;
     font-size: 20px;
     font-family: sans-serif;
     padding: 5px;
-    border-radius: 5px;
+    border-radius: 10px;
     border: none;
+    margin: 0 auto;
+    margin-top: 10px;
 }
 
 #reset {
     background-color: #7289da;
 }
 
-.player1 {
-    color: red;
+.gameResult{
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    margin-top: -50px;
+    margin-bottom: 20px;
+
 }
 
-.player2 {
-    color: #7289da;
-}

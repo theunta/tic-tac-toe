@@ -57,3 +57,10 @@ Create an array for the tiles using a queryselectorall on the divs in the grid
 
 Select the current player, reset button and win announcement elements
 
+Display who's turn it currently is
+
+Add win conditions, there is 8 combinations total in tic tac toe
+
+Clicking a tile should add an X or an O
+
+Display winner once win condition is met

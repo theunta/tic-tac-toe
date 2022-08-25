@@ -1,8 +1,12 @@
+body {
+    padding: 0;
+    margin: 0;
+}
 
 .background {
+    height: 100vh;
     background-color: #282b30;
-    height: 100%;
-    width: 100%;
+    padding: 1px;
 }
 
 .heading {
@@ -25,7 +29,6 @@
     grid-template-columns: 33% 33% 33%;
     grid-template-rows: 33% 33% 33%;
     max-width: 300px;
-
 }
 
 .tile {
@@ -39,17 +42,9 @@
     cursor: pointer;
 }
 
-.player1 {
-    color: red;
-}
-
-.player2 {
-    color: #7289da;
-}
 
 .displayReset {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     margin: 10px 0px 0px 10px ;
@@ -58,8 +53,21 @@
 .displayReset button {
     color: white;
     cursor: pointer;
+    font-size: 20px;
+    font-family: sans-serif;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
 }
 
 #reset {
     background-color: #7289da;
+}
+
+.player1 {
+    color: red;
+}
+
+.player2 {
+    color: #7289da;
 }

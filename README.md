@@ -1,4 +1,4 @@
-# Tic Tac Toe
+# ❌ Tic Tac Toe ⭕️
 
 Simple game of Tic-tac-toe or noughts and crosses!
 
@@ -8,8 +8,8 @@ Includes a game reset button and light mode toggle button
 
 Has a random (1 of 3) fact splash text on the first load of the website
 
-## :computer: [Click here](https://theunta.github.io/tic-tac-toe/) to see my live project!
-## ✏️ Planning & Problem Solving
+## 🕹 [Click here](https://theunta.github.io/tic-tac-toe/) to try out the website
+## ✏️ Planning & Requirements
 ### **Requirements**
 
 *Adhere to the basic rules of tic-tac-toe, Three in a row results in a win
@@ -72,3 +72,24 @@ Add win conditions, there is 8 combinations total in tic tac toe
 Clicking a tile should add an X or an O
 
 Display winner once win condition is met
+
+**bonus features ideas**
+
+Theme selector, Dark, light, blue, red etc
+
+Animate line through the three connected tiles
+
+Confetti animation when winner is announced
+
+"clack" sound when you place a tile
+
+### **Issues**
+
+Font can sometimes load slowly resulting in some elements being the wrong value
+
+Light button has a bit of a delay
+    - possible workaround: add an animation so that the delay is necessary
+    
+If the same win result happens two times in a row nothing on the page changes really
+    - possible fix: add an animation when someone wins
+    
